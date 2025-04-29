@@ -1,12 +1,16 @@
-﻿using System;
+﻿
+using Pedidos_app;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pedidos_app
+namespace PedidosApp
 {
-    class EntregaDron
+    public class EntregaDron : IMetodoEntrega
     {
+        public double CalcularCosto(int km) => 20 * km;
+        public string TipoEntrega() => "Dron";
     }
 }

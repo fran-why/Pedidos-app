@@ -1,12 +1,15 @@
-﻿using System;
+﻿using Pedidos_app;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pedidos_app
+namespace PedidosApp
 {
-    class EntregaCamion
+    public class EntregaCamion : IMetodoEntrega
     {
+        public double CalcularCosto(int km) => 5 * km;
+        public string TipoEntrega() => "Camión";
     }
 }
